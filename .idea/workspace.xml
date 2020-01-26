@@ -2,8 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce29838f-c63c-477d-a03c-7eb9e2cc9c52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CompanyClass/EngineeringCompany.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CompanyInterfaces/FinancesManage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CompanyInterfaces/StaffManage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ComparatorClasses/SalaryAscendingComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ComparatorClasses/SalaryDescendingComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Enums/BonusRates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Enums/Positions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorkerClass/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorkerClass/Operator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorkerClass/TopManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorkerInterfaces/CanGetBonuses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorkerInterfaces/CanIncreaseTotalIncome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Company/CompanyClass/Company$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Company/CompanyClass/Company$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Company/CompanyClass/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Company/CompanyClass/Company.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Company/CompanyInterfaces/FinancesManageable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Company/CompanyInterfaces/StaffManageable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Company/WorkerClass/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Company/WorkerClass/Worker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Company/WorkerInterfaces/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Company/WorkerInterfaces/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CompanyClass/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompanyClass/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CompanyInterfaces/FinancesManageable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CompanyInterfaces/StaffManageable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkerClass/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkerClass/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkerInterfaces/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkerInterfaces/Employee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,11 +37,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Enum" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Wc7apIVcIHiEVGi9qllImsOhJ7" />
   <component name="ProjectViewState">
@@ -31,7 +57,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main.Main" />
+      <module name="Company" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="Company" />
@@ -42,6 +81,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -69,25 +114,37 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1579445395882">
+    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1580046494498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1579445395882" />
-    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1579675436622">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1580046494498" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1579807309076">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1579807309076" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1580038208152">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580038208152" />
     <state width="2005" height="305" key="GridCell.Tab.0.bottom/2048.0.1536.832/0.0.2048.1112/-2048.0.2048.1112@0.0.2048.1112" timestamp="1579675436622" />
-    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1579675436622">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1580038208152">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1580038208152" />
     <state width="2005" height="305" key="GridCell.Tab.0.center/2048.0.1536.832/0.0.2048.1112/-2048.0.2048.1112@0.0.2048.1112" timestamp="1579675436622" />
-    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1579675436622">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1580038208152">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1580038208152" />
     <state width="2005" height="305" key="GridCell.Tab.0.left/2048.0.1536.832/0.0.2048.1112/-2048.0.2048.1112@0.0.2048.1112" timestamp="1579675436622" />
-    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1579675436622">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1580038208152">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1580038208152" />
     <state width="2005" height="305" key="GridCell.Tab.0.right/2048.0.1536.832/0.0.2048.1112/-2048.0.2048.1112@0.0.2048.1112" timestamp="1579675436622" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1580033862971">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1580033862971" />
   </component>
 </project>
