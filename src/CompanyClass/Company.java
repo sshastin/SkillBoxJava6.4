@@ -146,14 +146,9 @@ public abstract class Company implements FinancesManage, StaffManage {
     }
 
     @Override
-    public void fire(Employee worker, FireReasons fireReason, String password) {
-        if (passwordToFire.equals(password)) {
-            if (this.companyStaffList.contains(worker)) {
-                this.companyStaffList.remove(worker);
-                System.out.println("Ваше выходное пособие составит " + calculateSeverancePay(fireReason, worker.getMonthSalary()));
-            } else {
-                System.out.println("Такой работник не числится в компании.");
-            }
+    public void fire(Employee employee, FireReasons fireReason, String password) {
+        if (isPasswordValid(password)) {
+            fireAndRemoveWorkerFromList(employee, fireReason);
         } else {
             System.out.println("Password invalid. Please check the password and try again later.");
         }
@@ -161,18 +156,26 @@ public abstract class Company implements FinancesManage, StaffManage {
 
     @Override
     public void fireAll(ArrayList<Employee> listOfWorkersToFire, FireReasons fireReason, String password) {
-        if (passwordToFire.equals(password)) {
+        if (isPasswordValid(password)) {
             for (Employee employee : listOfWorkersToFire) {
-                if (this.companyStaffList.contains(employee)) {
-                    this.companyStaffList.remove(employee);
-                    System.out.println("Ваше выходное пособие составит " + calculateSeverancePay(fireReason, employee.getMonthSalary()));
-                } else {
-                    System.out.println("Такой работник не числится в компании.");
-                }
+                fireAndRemoveWorkerFromList(employee, fireReason);
             }
         } else {
             System.out.println("Password invalid. Please check the password and try again later.");
         }
+    }
+
+    protected void fireAndRemoveWorkerFromList(Employee employee, FireReasons fireReason) {
+        if (companyStaffList.contains(employee)) {
+            companyStaffList.remove(employee);
+            System.out.println("Ваше выходное пособие составит " + calculateSeverancePay(fireReason, employee.getMonthSalary()));
+        } else {
+            System.out.println("Такой работник не числится в компании.");
+        }
+    }
+
+    protected Boolean isPasswordValid(String password) {
+        return passwordToFire.equals(password);
     }
 
     @Override
