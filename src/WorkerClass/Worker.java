@@ -39,7 +39,7 @@ public abstract class Worker implements Employee {
 
     @Override
     public void setMonthSalary(Double monthSalary) {
-        this.salary = salary;
+        this.salary = monthSalary;
     }
 
     @Override

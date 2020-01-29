@@ -24,7 +24,8 @@ public class TopManager extends Worker implements CanGetBonuses {
 
     @Override
     public Double getMonthSalary() {
-        return (super.getMonthSalary() + getBonus());
+        return super.getMonthSalary();
+//        return (super.getMonthSalary() + getBonus());
     }
 
     @Override

@@ -185,9 +185,7 @@ public abstract class Company implements FinancesManage, StaffManage {
         copyOfCompanyStaffList.addAll(getCompanyStaff());
         Collections.sort(copyOfCompanyStaffList, new SalaryDescendingComparator());
 
-        if (count > copyOfCompanyStaffList.size()) {
-            count = copyOfCompanyStaffList.size();
-        }
+        count = checkWorkerListLength(copyOfCompanyStaffList, count);
 
         for (int i = 0; i < count; i++) {
             listOfTopSalaryStaff.add(copyOfCompanyStaffList.get(i));
@@ -198,18 +196,20 @@ public abstract class Company implements FinancesManage, StaffManage {
     @Override
     public List<Employee> getLowestSalaryStaff(int count) {
         List<Employee> listOfLowestSalaryStaff = new ArrayList<>();
-        List<Employee> copyOfStaffList = new ArrayList<>();
-        copyOfStaffList.addAll(getCompanyStaff());
-        Collections.sort(copyOfStaffList, new SalaryAscendingComparator());
+        List<Employee> copyOfCompanyStaffList = new ArrayList<>();
+        copyOfCompanyStaffList.addAll(getCompanyStaff());
+        Collections.sort(copyOfCompanyStaffList, new SalaryAscendingComparator());
 
-        if (count > copyOfStaffList.size()) {
-            count = copyOfStaffList.size();
-        }
+        count = checkWorkerListLength(copyOfCompanyStaffList, count);
 
         for (int i = 0; i < count; i++) {
-            listOfLowestSalaryStaff.add(copyOfStaffList.get(i));
+            listOfLowestSalaryStaff.add(copyOfCompanyStaffList.get(i));
         }
         return listOfLowestSalaryStaff;
+    }
+
+    protected Integer checkWorkerListLength(List<Employee> list, Integer size) {
+        return (list.size() > size) ? size : list.size();
     }
 
     protected Double calculateSeverancePay(FireReasons fireReason, Double workerSalary) {
