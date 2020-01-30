@@ -75,13 +75,15 @@ public class WorkersAutoCreate {
                 employeeList.add(new Manager(name, familyName, age, position, salary, company));
             }
         } else if (position.getPOSITION_NAME().equals("Operator")) {
-            for (int i = 0; i < 0; i++) {
+            for (int i = 0; i < numberOfEmployees; i++) {
                 name = getRandomName();
                 familyName = getRandomFamilyName();
                 age = getRandomNumberWithinRange(MIN_AGE, MAX_AGE);
                 salary = getRandomDoubleWithinRange(MIN_OPERATOR_SALARY, MAX_OPERATOR_SALARY);
                 employeeList.add(new Operator(name, familyName, age, position, salary, company));
             }
+        } else {
+            System.err.println("Неизвестная позиция");
         }
         return employeeList;
     }
@@ -100,6 +102,15 @@ public class WorkersAutoCreate {
         List<Integer> numbersOfWorkersToFire = new ArrayList<>();
         numbersOfWorkersToFire.addAll(numbers);
         return numbersOfWorkersToFire;
+    }
+
+    public void increaseCompanyIncomeByManagers(List<Employee> employeeList, Double minPossibleIncome, Double maxPossibleIncome) {
+        Iterator<Employee> employeeIterator = employeeList.iterator();
+        while (employeeIterator.hasNext()) {
+            if (employeeIterator.next() instanceof Manager) {
+                ((Manager) employeeIterator.next()).addIndividualManagerIncome(getRandomDoubleWithinRange(minPossibleIncome, maxPossibleIncome));
+            }
+        }
     }
 
     private String getRandomName() {
