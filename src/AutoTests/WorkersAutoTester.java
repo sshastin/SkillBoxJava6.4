@@ -5,14 +5,13 @@ import Enums.Positions;
 import WorkerClass.Manager;
 import WorkerClass.Operator;
 import WorkerClass.TopManager;
-import WorkerClass.Worker;
 import WorkerInterfaces.Employee;
 
 import java.util.*;
 
-public class WorkersAutoCreate {
+public class WorkersAutoTester {
 
-    private static WorkersAutoCreate instance = null;
+    private static WorkersAutoTester instance = null;
     private final Integer MIN_VALUE_UPPER_CASE = 0x0041;
     private final Integer MAX_VALUE_UPPER_CASE = 0x005A;
     private final Integer MIN_VALUE_LOWER_CASE = 0x0061;
@@ -32,13 +31,13 @@ public class WorkersAutoCreate {
     private Random random = new Random();
 
 
-    private WorkersAutoCreate() {
+    private WorkersAutoTester() {
 
     }
 
-    public static WorkersAutoCreate getInstance() {
+    public static WorkersAutoTester getInstance() {
         if (instance == null) {
-            instance = new WorkersAutoCreate();
+            instance = new WorkersAutoTester();
         }
         return instance;
     }
@@ -105,11 +104,13 @@ public class WorkersAutoCreate {
     }
 
     public void increaseCompanyIncomeByManagers(List<Employee> employeeList, Double minPossibleIncome, Double maxPossibleIncome) {
-        Iterator<Employee> employeeIterator = employeeList.iterator();
-        while (employeeIterator.hasNext()) {
-            if (employeeIterator.next() instanceof Manager) {
-                ((Manager) employeeIterator.next()).addIndividualManagerIncome(getRandomDoubleWithinRange(minPossibleIncome, maxPossibleIncome));
+
+        for (Employee employee : employeeList) {
+            if (!(employee instanceof Manager)) {
+
+                continue;
             }
+            ((Manager) employee).addIndividualManagerIncome(getRandomDoubleWithinRange(minPossibleIncome, maxPossibleIncome));
         }
     }
 

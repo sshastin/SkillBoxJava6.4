@@ -1,9 +1,9 @@
 package CompanyClass;
 
 import Enums.FireReasons;
+//import Exceptions.VacantPositionException;
 import WorkerInterfaces.Employee;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class EngineeringCompany extends Company {
@@ -142,17 +142,17 @@ public class EngineeringCompany extends Company {
     }
 
     @Override
-    public void hireAll(ArrayList<Employee> listOfWorkersToHire) {
+    public void hireAll(List<Employee> listOfWorkersToHire) {
         super.hireAll(listOfWorkersToHire);
     }
 
     @Override
-    public void fire(Employee worker, FireReasons fireReason, String password) {
+    public void fire(Employee worker, FireReasons fireReason, String password) {//} throws VacantPositionException {
         super.fire(worker, fireReason, password);
     }
 
     @Override
-    public void fireAll(ArrayList<Employee> listOfWorkersToFire, FireReasons fireReason, String password) {
+    public void fireAll(List<Employee> listOfWorkersToFire, FireReasons fireReason, String password) {//} throws VacantPositionException {
         super.fireAll(listOfWorkersToFire, fireReason, password);
     }
 
@@ -169,6 +169,21 @@ public class EngineeringCompany extends Company {
     @Override
     protected Double calculateSeverancePay(FireReasons fireReason, Double workerSalary) {
         return super.calculateSeverancePay(fireReason, workerSalary);
+    }
+
+    @Override
+    protected void fireAndRemoveWorkerFromList(Employee employee, FireReasons fireReason) {//} throws VacantPositionException {
+        super.fireAndRemoveWorkerFromList(employee, fireReason);
+    }
+
+    @Override
+    protected Boolean isPasswordValid(String password) {
+        return super.isPasswordValid(password);
+    }
+
+    @Override
+    protected Integer checkWorkerListLength(List<Employee> list, Integer size) {
+        return super.checkWorkerListLength(list, size);
     }
 
     @Override

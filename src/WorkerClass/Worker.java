@@ -93,7 +93,7 @@ public abstract class Worker implements Employee {
 
     @Override
     public String toString() {
-        return ("Досье работника:\nИмя: " + getName() + "\nФамилия: " + getFamilyName() + "\nВозраст: " +
-                getAge() + "\nДолжность в компании: " + getPositionName() + "\nЗароботная плата: " + getMonthSalary());
+            return ("Досье работника:\nИмя: " + getName() + "\nФамилия: " + getFamilyName() + "\nВозраст: " +
+                    getAge() + "\nДолжность в компании: " + getPositionName() + "\nЗароботная плата: " + getMonthSalary());
     }
 }

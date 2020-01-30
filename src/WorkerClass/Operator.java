@@ -2,6 +2,7 @@ package WorkerClass;
 
 import CompanyClass.Company;
 import Enums.Positions;
+//import Exceptions.VacantPositionException;
 
 public class Operator extends Worker {
     public Operator(String name, String familyName, Integer age, Positions position, Double salary, Company company) {
@@ -29,7 +30,7 @@ public class Operator extends Worker {
     }
 
     @Override
-    public String getName() {
+    public String getName() {//} throws VacantPositionException {
         return super.getName();
     }
 
@@ -74,7 +75,7 @@ public class Operator extends Worker {
     }
 
     @Override
-    public String getWorkerFullName() {
+    public String getWorkerFullName() {//throws VacantPositionException {
         return super.getWorkerFullName();
     }
 

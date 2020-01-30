@@ -1,9 +1,9 @@
 package CompanyClass;
 
 import Enums.FireReasons;
+//import Exceptions.VacantPositionException;
 import WorkerInterfaces.Employee;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ITCompany extends Company {
@@ -143,17 +143,17 @@ public class ITCompany extends Company {
     }
 
     @Override
-    public void hireAll(ArrayList<Employee> listOfWorkersToHire) {
+    public void hireAll(List<Employee> listOfWorkersToHire) {
         super.hireAll(listOfWorkersToHire);
     }
 
     @Override
-    public void fire(Employee worker, FireReasons fireReason, String password) {
+    public void fire(Employee worker, FireReasons fireReason, String password) {//throws VacantPositionException {
         super.fire(worker, fireReason, password);
     }
 
     @Override
-    public void fireAll(ArrayList<Employee> listOfWorkersToFire, FireReasons fireReason, String password) {
+    public void fireAll(List<Employee> listOfWorkersToFire, FireReasons fireReason, String password) {//} throws VacantPositionException {
         super.fireAll(listOfWorkersToFire, fireReason, password);
     }
 

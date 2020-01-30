@@ -2,6 +2,7 @@ package WorkerInterfaces;
 
 import CompanyClass.Company;
 import Enums.Positions;
+//import Exceptions.VacantPositionException;
 
 public interface Employee {
 
@@ -13,7 +14,7 @@ public interface Employee {
 
     void setMonthSalary(Double monthSalary);
 
-    String getName();
+    String getName();// throws VacantPositionException;
 
     void setName(String name);
 
@@ -25,7 +26,7 @@ public interface Employee {
 
     Integer getAge();
 
-    String getWorkerFullName();
+    String getWorkerFullName();; // throws VacantPositionException;
 
     String getCompanyName();
 

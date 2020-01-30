@@ -3,6 +3,7 @@ package WorkerClass;
 import CompanyClass.Company;
 import Enums.BonusRates;
 import Enums.Positions;
+//import Exceptions.VacantPositionException;
 import WorkerInterfaces.CanGetBonuses;
 import WorkerInterfaces.CanIncreaseTotalIncome;
 
@@ -23,6 +24,11 @@ public class Manager extends Worker implements CanIncreaseTotalIncome, CanGetBon
 
     private void addToTotalCompanyIncome(Double money) {
         getCompany().addTotalIncome(money);
+    }
+
+    @Override
+    public Double getFullReward() {
+        return (getMonthSalary() + getBonus());
     }
 
     public Manager(String name, String familyName, Integer age, Positions position, Double salary, Company company) {
@@ -50,7 +56,7 @@ public class Manager extends Worker implements CanIncreaseTotalIncome, CanGetBon
     }
 
     @Override
-    public String getName() {
+    public String getName() {//} throws VacantPositionException {
         return super.getName();
     }
 
@@ -95,7 +101,7 @@ public class Manager extends Worker implements CanIncreaseTotalIncome, CanGetBon
     }
 
     @Override
-    public String getWorkerFullName() {
+    public String getWorkerFullName() {//} throws VacantPositionException {
         return super.getWorkerFullName();
     }
 
