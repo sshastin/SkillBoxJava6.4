@@ -5,7 +5,6 @@ import CompanyClass.EngineeringCompany;
 import CompanyClass.ITCompany;
 import Enums.FireReasons;
 import Enums.Positions;
-//import Exceptions.VacantPositionException;
 import WorkerClass.Manager;
 import WorkerClass.TopManager;
 import WorkerInterfaces.Employee;
@@ -15,7 +14,7 @@ import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) {//} throws VacantPositionException {
+    public static void main(String[] args) {
         //Создаем компании
         EngineeringCompany engineeringCompany = new EngineeringCompany("EngComp", "987654321");
         ITCompany itCompany = new ITCompany("IOI", "Qwerty123");
@@ -28,25 +27,14 @@ public class Main {
         List<Employee> listOfManagersEngComp = workersAutoTester.getDefinedNumberListOfEmployees(Positions.MANAGER, 80, engineeringCompany);
         List<Employee> listOfOperatorsEngComp = workersAutoTester.getDefinedNumberListOfEmployees(Positions.OPERATOR, 180, engineeringCompany);
 
+        engineeringCompany.hireAll(listOfTopManagersEngComp);
         engineeringCompany.hireAll(listOfManagersEngComp);
         engineeringCompany.hireAll(listOfOperatorsEngComp);
-
-        int i = listOfTopManagersEngComp.size();
-        engineeringCompany.setCEO(listOfTopManagersEngComp.get(--i));
-        engineeringCompany.setCAO(listOfTopManagersEngComp.get(--i));
-        engineeringCompany.setCFO(listOfTopManagersEngComp.get(--i));
-        engineeringCompany.setCIO(listOfTopManagersEngComp.get(--i));
-        engineeringCompany.setCISO(listOfTopManagersEngComp.get(--i));
-        engineeringCompany.setCOO(listOfTopManagersEngComp.get(--i));
-        engineeringCompany.setCSO(listOfTopManagersEngComp.get(--i));
-        engineeringCompany.setCTO(listOfTopManagersEngComp.get(--i));
-        engineeringCompany.setCVO(listOfTopManagersEngComp.get(--i));
-        engineeringCompany.setCMO(listOfTopManagersEngComp.get(--i));
 
         List<Employee> lowestSalaries = engineeringCompany.getLowestSalaryStaff(30);
         List<Employee> highestSalaries = engineeringCompany.getTopSalaryStaff(15);
 
-        i = 1;
+        int i = 1;
         System.out.println("\nСамые низкие зарплаты:");
         for (Employee employee : lowestSalaries) {
             System.out.println(i++ + ". " + employee.getPositionName() + " " + employee.getMonthSalary());
@@ -90,9 +78,6 @@ public class Main {
         for (Integer index : listOfNumbersToFire) {
             listToFire.add(engineeringCompany.getCompanyStaff().get(index));
         }
-        System.out.println("Fire CAO ");
-        engineeringCompany.fire(engineeringCompany.getCAO(), FireReasons.OWN_FREE_WILL, "987654321");
-        System.out.println(engineeringCompany.getCAO().toString());
 
         highestSalaries = engineeringCompany.getTopSalaryStaff(10);
         lowestSalaries = engineeringCompany.getLowestSalaryStaff(30);
